@@ -43,3 +43,20 @@ function addInventoryItem(productName) { // function that adds item to inventory
 
 };
 
+// Task 4: Business Customer Section – Handling Event Bubbling
+
+const customerCards = document.querySelectorAll(".customer-card"); // selects all elements in class customer cards
+const customerSection = document.getElementById("customerSection"); // get parent container
+
+customerCards.forEach(card => {
+    card.addEventListener("click", (event) => {
+        console.log("Customer Card has been clicked.");
+    });
+});
+
+customerSection.addEventListener("click", () => {
+    console.log("Customer Section has been clicked.");
+});
+
+
+
